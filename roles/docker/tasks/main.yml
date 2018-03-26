@@ -28,6 +28,7 @@
 
 - name: 开启docker 服务
   shell: systemctl daemon-reload && systemctl enable docker && systemctl restart docker
+  ignore_errors: true
 
 ## 可选 ------安装docker查询镜像 tag的小工具----
 # 先拉取下节点的ansible setup信息，起到缓存效果，否则后续when 判断可能失败
